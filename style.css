@@ -371,11 +371,11 @@ body {
   0%,
   100% {
     -webkit-transform: rotate(45deg);
-    transform: rotate(340deg);
+    transform: rotate(350deg);
   }
   50% {
     -webkit-transform: rotate(405deg);
-    transform: rotate(395deg);
+    transform: rotate(375deg);
   }
 }
 
