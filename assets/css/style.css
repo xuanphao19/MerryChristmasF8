@@ -206,8 +206,8 @@ body {
   -webkit-mask-repeat: no-repeat;
   object-fit: cover;
   border-radius: 999px;
-  mask-image: url(/assets/img/BongTuyet2.svg);
-  -webkit-mask-image: url(/assets/img/BongTuyet2.svg);
+  mask-image: url(./assets/img/BongTuyet2.svg);
+  -webkit-mask-image: url(./assets/img/BongTuyet2.svg);
   animation: snowMove 20s ease-in-out infinite;
   /* hueChristmas 0.5s ease-in-out infinite */
 }
