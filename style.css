@@ -234,7 +234,7 @@ body {
   background-clip: content-box;
   background-position: center center;
   filter: drop-shadow(0 0 1px #e0e0fff9);
-  background-image: url(/assets/img/Snow01.png);
+  background-image: url(./assets/img/Snow01.png);
   -webkit-filter: drop-shadow(0 0 1px #e0e0fff9);
   animation: snowRevolve 60s ease-out infinite;
 }
