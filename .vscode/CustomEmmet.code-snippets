@@ -1,0 +1,98 @@
+// Place your Laptrinh-thucchien workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+// Placeholders with the same ids are connected.
+
+//                      ĐỊNH NGHĨA GÕ TẮT CÁCH 1:
+//            BA BƯỚC ĐƠN GIẢN TỰ ĐỊNH NGHĨA GÕ TẮT BẰNG VsCode:
+
+// THỨ TỰ CÁCH TIẾN HÀNH:
+/*
+   Bước 1: Tạo 1 file (tên bất kỳ) với phần mở rộng là: .code-snippets
+   Bước 2: Viết Code JSON như ví dụ dưới:
+   Bước 3: Lưu file vừa tạo vào thư mục cài đặt người dùng VScode của bạn rồi sử dụng thôi.
+*/
+
+// Example:
+{
+  "thanhhoaCss": {
+    "prefix": ["act"],
+    "body": [".App-content {padding-bottom: 6px; font-size: 1.6rem; font-style: italic; line-height: 1.4; border-radius: 5px;}"]
+  }
+}
+// GIẢI THÍCH CODE: (của ví dụ trên)
+/*
+  Cú pháp JSON:
+            "Tên Snippets tùy biến": {
+                "scope": "javascript,html,css (tùy biến)",
+                "prefix": "Bạn tùy biến",
+                "body": [Bạn tùy biến]
+            }
+    "thanhhoaHTML": Khai báo tên cho Snippets của bạn.
+    "scope": Khai báo ngôn ngữ thực thi mã gõ tắt của bạn (Chấp nhận nhiều ngôn ngữ, được
+đặt trong ngoặc kép, ngăn cách bằng dấu phẩy).
+    "prefix": Khai báo cú pháp gõ tắt của bạn sau này.(Ở vd này tôi muốn gõ cú pháp là: d2)
+      + Tiền tố "body" Khai báo cho VSCode biết cần trả ra đoạn mã (bên trong this body)
+      + Hậu tố "..." (sau dấu "body": ) Là nội dung Snippets sẽ được VScode in ra cho bạn.
+      "Chấp nhận các chuỗi bất kỳ đặt trong ngoặc kép" ngăn cách dòng bằng dấu phẩy.
+      + Ký tự ${n} Là nơi sau khi có kết quả tại file HTML trỏ chuột sẽ trỏ đến mỗi lần bạn
+    nhấn Tab.
+*/
+
+// CÁCH SỬ DỤNG:
+/*
+    Tại file HTML:
+        Bạn chỉ cần gõ: d2 (như ở vd này).
+        Bấm Enter bạn sẽ thấy được kết quả huyền diệu như thế nào.
+        Ở Ví dụ này gõ: d2 + Enter ta được như sau:
+
+<div id="Sửa id (Sửa xong bấm Tab để đi tiếp bạn nhé)" class="Tự sửa class (Không di chuyển trỏ chuột ra khỏi vùng ánh xạ này bạn nhé)">
+  <header class="page-header">
+    <nav>
+      <ul class="nav">
+        <li class="nav__item">
+          <a href="Đường dẫn của bạn"
+            ><font style="vertical-align: inherit"><font style="vertical-align: inherit">Bạn tùy biến</font></font></a
+          >
+          <ul class="nav">
+            <li class="nav__item">
+              <a href="Đường dẫn của bạn"
+                ><font style="vertical-align: inherit"><font style="vertical-align: inherit">Bạn tùy biến</font></font></a
+              >
+              <ul class="nav">
+                <li class="nav__item">
+                  <a href="Thay Nd của bạn"
+                    ><font style="vertical-align: inherit"><font style="vertical-align: inherit">Chúc các bạn Sức khỏe, học tốt và thành công!</font></font></a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+    **** Nếu VsCode của bạn không TỰ định dạng về như này thì bạn nhấn Ctrol + s Để
+VsCode format lại code trước nhé rồi nhấn Tab để chỉnh sửa.****
+
+    Tại file CSS:
+        (Tương tự như trên HTML).
+        Bấm Enter bạn sẽ thấy được kết quả  huyền diệu như thế nào.
+*/
+
+// LƯU Ý QUAN TRỌNG THAY LỜI KÊT:
+/*
+  - Đã gọi là Lập trình thì cần chính xác đến từng ký tự.
+  - Với phương pháp này:
+      + Đặt tên file tùy biến. Nhưng phần mở rông phải chính xác là: .code-snippets
+      + Phần hậu tố các bạn Nhập bất cứ thứ gì VScode sẽ trả ra như thế. Nên các bạn chỉ cần nhập đúng theo cú pháp tiêu chuẩn của ngôn ngữ bạn muốn gõ tắt là ok.
+      + Khi sử dụng phải sử dụng đúng vị trí theo ngôn ngữ đã khai báo. Nhưng sử dụng CSS Snippets thì không nhất thiết phải sử dụng bên trong dấu ngoặc nhọn của một bộ chọn CSS cụ thể. Và có thể sử dụng cho bất cứ ngôn ngữ nào nếu bạn không khai báo  "scope" hoặc để bằng rỗng ("scope" : ""). Như ở ví dụ trên: thanhhoaCss mình cố tình không khai báo "scope".
+  Các bạn có thể sử dụng Snippets tự tạo của bạn ở bất cứ dự án nào nếu các bạn lưu file Snippets ở phạm vi Global.
+  Trong khi chỉnh sửa các phần tùy biến cần cân nhắc chỉnh sửa chính xác một lần. Vì trong khi chỉnh sửa không thể bấm trỏ chuột ra ngoài (ra khỏi vùng ánh xạ chỉnh sửa). Nếu bấm ra ngoài thì sẽ không thể tiếp tục dùng phím Tab để di chuyển đến các vùng tiếp theo được.
+
+    CHÚC CÁC BẠN SỨC KHỎE VÀ THÀNH CÔNG !!!
+*/

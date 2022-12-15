@@ -1,0 +1,23 @@
+{
+  "var": {
+    "prefix": "var",
+    "body": ["var ${1:main} = ${2: ABC} ;"],
+    "description": "thutrang"
+  },
+  "let": {
+    "prefix": "let",
+    "body": ["let ${1:variable} = ${2: ABC};"],
+    "description": "thutrang"
+  },
+  "Đây là tên phím tắt!": {
+    "scope": "html",
+    "prefix": "br",
+    "body": ["<br>"],
+    "description": "Đây là phần mô tả"
+  },
+  "dq": {
+    "prefix": "dq",
+    "body": ["document.querySelector('${1:able}')"],
+    "description": "thutrang"
+  }
+}

@@ -10,7 +10,7 @@
     snowEle.style.setProperty("--move", snowTranslate);
     snowEle.style.width = snowSize + "px";
     snowEle.style.height = snowSize + "px";
-    snowEle.style.filter = "blur(" + (snowSize % 6) + "px)";
+    snowEle.style.filter = "blur(" + (snowSize % 5) + "px)";
     snowEle.style.top = Math.floor(Math.random() * 250) + "px";
     snowEle.style.animationDuration = Math.floor(Math.random() * 95) + 9 + "s";
     snowEle.style.animationDelay = Math.floor(Math.random() * 2500) + 300 + "ms";
@@ -39,7 +39,7 @@
     shootingStar.style.left = Math.floor(Math.random() * 1400) + "px";
     shootingStar.style.animationDelay = Math.floor(Math.random() * 2500) * 3 + 500 + "ms";
     shootingStar.style.animationDuration = Math.floor(Math.random() * 1500) + 3500 + "ms";
-    inclSky.style.setProperty("--longStar", Math.floor(Math.random() * 180) + 80 + "px");
+    inclSky.style.setProperty("--longStar", Math.floor(Math.random() * 200) + 80 + "px");
     inclSky.style.setProperty("--skyX", Math.floor(Math.random() * 500) + 700 + "px");
     inclSky.appendChild(shootingStar);
   }
