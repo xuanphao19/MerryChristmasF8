@@ -2,18 +2,21 @@
   ("use strict");
   let container = document.querySelector(".container");
   for (let i = 0; i < 69; i++) {
-    let snowSize = Math.floor(Math.random() * 15 + 15);
+    let snowSize = Math.floor(Math.random() * 20 + 15);
     let snowTranslate = Math.floor((Math.random() - 0.6) * 700 + 5) + "px";
     let snowEle = document.createElement("div");
-    snowEle.classList.add("snow");
+    snowEle.classList.add("wrapSnow");
+    snowEle.innerHTML = `<div class="snow"></div>`;
     snowEle.style.setProperty("--move", snowTranslate);
     snowEle.style.width = snowSize + "px";
     snowEle.style.height = snowSize + "px";
-    snowEle.style.filter = "blur(" + (snowSize % 4) + "px)";
-    snowEle.style.top = Math.floor(Math.random() * 350) + "px";
-    snowEle.style.animationDuration = Math.floor(Math.random() * 85) + 6 + "s";
+    snowEle.style.filter = "blur(" + (snowSize % 6) + "px)";
+    snowEle.style.top = Math.floor(Math.random() * 250) + "px";
+    snowEle.style.animationDuration = Math.floor(Math.random() * 95) + 9 + "s";
+    snowEle.style.animationDelay = Math.floor(Math.random() * 2500) + 300 + "ms";
     snowEle.style.left = Math.floor(Math.random() * container.clientWidth) + "px";
     container.appendChild(snowEle);
+
     let starsEle = document.createElement(`div`);
     let starDelay = Math.floor(Math.random() * 15) + "s";
     starsEle.classList.add("wrapStar");
