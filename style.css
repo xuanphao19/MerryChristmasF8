@@ -192,45 +192,61 @@ body {
     filter: hue-rotate(360deg);
   }
 }
-.snow {
+.wrapSnow {
   --move: "";
+  top: 7%;
+  left: 8%;
+  width: 60px;
+  height: 60px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  background-color: azure;
-  mask-size: 100%;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  -webkit-mask-repeat: no-repeat;
   object-fit: cover;
   border-radius: 999px;
-  mask-image: url(./assets/img/BongTuyet2.svg);
-  -webkit-mask-image: url(./assets/img/BongTuyet2.svg);
+  background: transparent;
   animation: snowMove 20s ease-in-out infinite;
-  /* hueChristmas 0.5s ease-in-out infinite */
+  opacity: 0.8;
 }
 @keyframes snowMove {
   0% {
-    transform: scale(0.1);
     transform: translate(0, 0);
     opacity: 0;
-    /* filter: hue-rotate(0deg); */
   }
   10% {
     opacity: 0.6;
   }
   50% {
-    /* filter: hue-rotate(160deg); */
     opacity: 0.8;
   }
   100% {
-    transform: translate(var(--move), 70vh);
-    /* filter: hue-rotate(360deg); */
+    transform: translate(var(--move), 50vh);
     opacity: 0;
   }
 }
+.snow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 999px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-position: center center;
+  filter: drop-shadow(0 0 1px #e0e0fff9);
+  background-image: url(/assets/img/Snow01.png);
+  -webkit-filter: drop-shadow(0 0 1px #e0e0fff9);
+  animation: snowRevolve 60s ease-out infinite;
+}
+@keyframes snowRevolve {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(3600deg);
+  }
+}
+
 .star,
 .wrapStar,
 .shootingStar {
@@ -248,6 +264,7 @@ body {
   --wStarA: "";
   --StarWb: "";
   --StarWa: "";
+  opacity: 0.7;
 }
 .star {
   left: 50%;
@@ -359,18 +376,17 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: #5f92ff32; */
   -webkit-transform: rotateZ(5deg);
   transform: rotateZ(5deg);
   animation: inclSky 60000ms linear infinite;
-    animation-delay: 15s;
+  animation-delay: 20s;
   z-index: 1;
 }
 
 @keyframes inclSky {
   0%,
   100% {
-    transform: rotate(350deg);
+    transform: rotate(345deg);
   }
   50% {
     transform: rotate(375deg);
