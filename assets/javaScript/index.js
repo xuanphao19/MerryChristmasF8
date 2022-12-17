@@ -1,7 +1,7 @@
 {
   ("use strict");
   let container = document.querySelector(".container");
-  for (let i = 0; i < 69; i++) {
+  for (let i = 0; i < 99; i++) {
     let snowSize = Math.floor(Math.random() * 20 + 15);
     let snowTranslate = Math.floor((Math.random() - 0.6) * 700 + 5) + "px";
     let snowEle = document.createElement("div");
@@ -21,14 +21,14 @@
     let starDelay = Math.floor(Math.random() * 15) + "s";
     starsEle.classList.add("wrapStar");
     starsEle.innerHTML = `<div class="star"></div>`;
-    starsEle.style.filter = "blur(" + Math.floor(Math.random() * 3) + "px)";
-    starsEle.style.top = Math.floor(Math.random() * 350) + "px";
+    // starsEle.style.filter = "blur(" + Math.floor(Math.random() * 3) + "px)";
+    starsEle.style.top = Math.floor(Math.random() * 450) + "px";
     starsEle.style.left = Math.floor(Math.random() * container.clientWidth) + "px";
     starsEle.style.setProperty("--starDelay", starDelay);
-    starsEle.style.setProperty("--wStarB", Math.floor(Math.random() * 35) + 5 + "px");
-    starsEle.style.setProperty("--wStarA", Math.floor(Math.random() * 35) + 5 + "px");
-    starsEle.style.setProperty("--StarWa", Math.floor(Math.random() * 62) + 5 + "px");
-    starsEle.style.setProperty("--StarWb", Math.floor(Math.random() * 42) + 5 + "px");
+    starsEle.style.setProperty("--wStarB", Math.floor(Math.random() * 25) + 3 + "px");
+    starsEle.style.setProperty("--wStarA", Math.floor(Math.random() * 25) + 3 + "px");
+    starsEle.style.setProperty("--StarWa", Math.floor(Math.random() * 52) + 3 + "px");
+    starsEle.style.setProperty("--StarWb", Math.floor(Math.random() * 32) + 3 + "px");
     container.appendChild(starsEle);
   }
   let inclSky = document.querySelector(".inclinedSky");
