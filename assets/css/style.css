@@ -14,13 +14,17 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(44, 56, 91);
+  background-image: url(./thienha.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .Christmas {
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity: 0.8;
+  opacity: 0.6;
+  /* filter: brightness(0.7); */
 }
 .SantaClaus {
   left: -20%;
@@ -36,22 +40,22 @@ body {
     top: 40%;
     left: -20%;
     opacity: 0;
-    width: 850px;
+    width: 750px;
   }
   10% {
-    opacity: 0.9;
+    opacity: 0.6;
   }
   20% {
     opacity: 0.2;
   }
   30% {
-    opacity: 0.8;
+    opacity: 0.6;
   }
   40% {
-    opacity: 0.1;
+    opacity: 0.8;
   }
   50% {
-    opacity: 0.6;
+    opacity: 0.5;
   }
   60% {
     opacity: 0;
@@ -81,7 +85,7 @@ body {
 }
 .giftBox {
   width: 121px;
-  opacity: 0.8;
+  opacity: 0.7;
   z-index: 3;
   filter: drop-shadow(0px 0px 16px #ffc6b5);
 }
@@ -103,7 +107,7 @@ body {
 }
 .giftBox2 {
   width: 30px;
-  opacity: 0.6;
+  opacity: 0.5;
   animation: giftBox2Move 260s infinite linear;
 }
 @keyframes giftBox2Move {
@@ -121,7 +125,7 @@ body {
   width: 22px;
   top: 40%;
   left: 19%;
-  opacity: 0.6;
+  opacity: 0.7;
   animation: giftBox3Move 24s infinite linear;
   z-index: 0;
 }
@@ -141,6 +145,7 @@ body {
   width: 101px;
   left: 7%;
   opacity: 0.6;
+  filter: brightness(0.8);
 }
 .giftBox5 {
   position: absolute;
@@ -152,6 +157,7 @@ body {
   background-size: 100%;
   animation: giftBox5Move 8s infinite linear;
   transition: all linear 0.3s;
+  filter: brightness(0.8);
   opacity: 0.9;
 }
 @keyframes giftBox5Move {
@@ -172,7 +178,7 @@ body {
   width: 101px;
   border-radius: 9999px;
   box-shadow: inset rgb(0 0 0 / 65%) 0px 0px 10px;
-  filter: brightness(0.7);
+  /* filter: brightness(0.7); */
   z-index: 1;
 }
 .earthWrap {
@@ -261,7 +267,7 @@ body {
   background: transparent;
   animation: snowMove 20s ease-in-out infinite;
   transition: all linear 0.3s;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 @keyframes snowMove {
   0% {
@@ -269,10 +275,10 @@ body {
     opacity: 0;
   }
   10% {
-    opacity: 0.6;
+    opacity: 0.5;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.7;
   }
   100% {
     transform: translate(var(--move), 50vh);
@@ -313,6 +319,9 @@ body {
   border-radius: 999px;
   filter: drop-shadow(0 0 4px #e7ffc7d7);
   -webkit-filter: drop-shadow(0 0 4px #f0ffddd9);
+}
+.wrapStar {
+  animation: snowRevolve 26s ease-out infinite;
 }
 .shootingStar,
 .wrapStar {
@@ -362,7 +371,7 @@ body {
     width: var(--wStarB);
     opacity: 1;
   }
-  20% {
+  30% {
     width: 0;
     opacity: 0;
   }
@@ -385,7 +394,7 @@ body {
     width: var(--wStarA);
     opacity: 1;
   }
-  20% {
+  30% {
     width: 0;
     opacity: 0;
   }
@@ -412,7 +421,7 @@ body {
     width: var(--StarWb);
     opacity: 1;
   }
-  20% {
+  30% {
     width: 0;
     opacity: 0;
   }
@@ -438,7 +447,7 @@ body {
     width: var(--StarWa);
     opacity: 1;
   }
-  20% {
+  30% {
     width: 0;
     opacity: 0;
   }
@@ -511,5 +520,7 @@ body {
   }
   100% {
     transform: translateX(var(--skyX));
+
+    background-image: linear-gradient (to right, red, blue);
   }
 }
