@@ -1,4 +1,4 @@
-{
+document.addEventListener("DOMContentLoaded", function (event) {
   ("use strict");
   let container = document.querySelector(".container");
   for (let i = 0; i < 99; i++) {
@@ -43,4 +43,4 @@
     inclSky.style.setProperty("--skyX", Math.floor(Math.random() * 500) + 700 + "px");
     inclSky.appendChild(shootingStar);
   }
-}
+});
