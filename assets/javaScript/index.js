@@ -22,15 +22,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
     starsEle.classList.add("wrapStar");
     starsEle.innerHTML = `<div class="star"></div>`;
     // starsEle.style.filter = "blur(" + Math.floor(Math.random() * 3) + "px)";
-    starsEle.style.top = Math.floor(Math.random() * 450) + "px";
+    starsEle.style.top = Math.floor(Math.random() * 500) + "px";
     starsEle.style.left = Math.floor(Math.random() * container.clientWidth) + "px";
+    let sizeOder = Math.floor(Math.random() * 16) + 2 + "px";
     starsEle.style.setProperty("--starDelay", starDelay);
-    starsEle.style.setProperty("--wStarB", Math.floor(Math.random() * 25) + 3 + "px");
-    starsEle.style.setProperty("--wStarA", Math.floor(Math.random() * 25) + 3 + "px");
-    starsEle.style.setProperty("--StarWa", Math.floor(Math.random() * 52) + 3 + "px");
-    starsEle.style.setProperty("--StarWb", Math.floor(Math.random() * 32) + 3 + "px");
+    starsEle.style.setProperty("--sizeStar", sizeOder);
+    starsEle.style.setProperty("--StarWa", Math.floor(Math.random() * 24) + 2 + "px");
     container.appendChild(starsEle);
   }
+  
   let inclSky = document.querySelector(".inclinedSky");
   for (let i = 0; i < 9; i++) {
     let shootingStar = document.createElement(`div`);
