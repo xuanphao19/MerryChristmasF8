@@ -1,4 +1,10 @@
 {
+  "Đây là tên phím tắt!": {
+    "scope": "html", // Đây là phạm vi áp dụng (Không khai báo === -g).
+    "prefix": "br", // Đây là phím gõ tắt.
+    "body": ["<br>"], // Đây là kết quả xuất ra. ${n:} là vị trí trỏ chuột.
+    "description": "Đây là phần mô tả"
+  },
   "var": {
     "prefix": "var",
     "body": ["var ${1:main} = ${2: ABC} ;"],
@@ -8,12 +14,6 @@
     "prefix": "let",
     "body": ["let ${1:variable} = ${2: ABC};"],
     "description": "thutrang"
-  },
-  "Đây là tên phím tắt!": {
-    "scope": "html",
-    "prefix": "br",
-    "body": ["<br>"],
-    "description": "Đây là phần mô tả"
   },
   "dq": {
     "prefix": "dq",
