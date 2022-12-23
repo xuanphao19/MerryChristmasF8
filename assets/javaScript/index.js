@@ -13,10 +13,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     snowEle.style.filter = "blur(" + (snowSize % 5) + "px)";
     snowEle.style.top = Math.floor(Math.random() * 250) + "px";
     snowEle.style.animationDuration = Math.floor(Math.random() * 95) + 9 + "s";
-    snowEle.style.animationDelay =
-      Math.floor(Math.random() * 2500) + 300 + "ms";
-    snowEle.style.left =
-      Math.floor(Math.random() * container.clientWidth) + "px";
+    snowEle.style.animationDelay = Math.floor(Math.random() * 2500) + 300 + "ms";
+    snowEle.style.left = Math.floor(Math.random() * container.clientWidth) + "px";
     container.appendChild(snowEle);
 
     let starsEle = document.createElement(`div`);
@@ -25,15 +23,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     starsEle.innerHTML = `<div class="star"></div>`;
     // starsEle.style.filter = "blur(" + Math.floor(Math.random() * 3) + "px)";
     starsEle.style.top = Math.floor(Math.random() * 500) + "px";
-    starsEle.style.left =
-      Math.floor(Math.random() * container.clientWidth) + "px";
+    starsEle.style.left = Math.floor(Math.random() * container.clientWidth) + "px";
     let sizeOder = Math.floor(Math.random() * 16) + 1 + "px";
     starsEle.style.setProperty("--starDelay", starDelay);
     starsEle.style.setProperty("--sizeStar", sizeOder);
-    starsEle.style.setProperty(
-      "--StarWa",
-      Math.floor(Math.random() * 24) + 2 + "px",
-    );
+    starsEle.style.setProperty("--StarWa", Math.floor(Math.random() * 24) + 2 + "px");
     container.appendChild(starsEle);
   }
 
@@ -43,18 +37,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     shootingStar.classList.add("shootingStar");
     shootingStar.style.top = Math.floor(Math.random() * 350) + "px";
     shootingStar.style.left = Math.floor(Math.random() * 1400) + "px";
-    shootingStar.style.animationDelay =
-      Math.floor(Math.random() * 2500) * 3 + 500 + "ms";
-    shootingStar.style.animationDuration =
-      Math.floor(Math.random() * 1500) + 3500 + "ms";
-    inclSky.style.setProperty(
-      "--longStar",
-      Math.floor(Math.random() * 200) + 80 + "px",
-    );
-    inclSky.style.setProperty(
-      "--skyX",
-      Math.floor(Math.random() * 500) + 700 + "px",
-    );
+    shootingStar.style.animationDelay = Math.floor(Math.random() * 2500) * 3 + 500 + "ms";
+    shootingStar.style.animationDuration = Math.floor(Math.random() * 1500) + 3500 + "ms";
+    inclSky.style.setProperty("--longStar", Math.floor(Math.random() * 200) + 80 + "px");
+    inclSky.style.setProperty("--skyX", Math.floor(Math.random() * 500) + 700 + "px");
     inclSky.appendChild(shootingStar);
   }
 });
