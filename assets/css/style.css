@@ -301,7 +301,7 @@ body {
   -webkit-filter: drop-shadow(0 0 4px var(--dropShadowSnow));
   animation: snowRevolve 120s ease-out infinite;
   transition: all linear 0.3s;
-  box-shadow: 0 -2px 4px #73c0a06e;
+  box-shadow: 0 -2px 4px #9bf7d15f;
 }
 @keyframes snowRevolve {
   0% {
