@@ -32,14 +32,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   let inclSky = document.querySelector(".inclinedSky");
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 17; i++) {
     let shootingStar = document.createElement(`div`);
     shootingStar.classList.add("shootingStar");
     shootingStar.style.top = Math.floor(Math.random() * 350) + "px";
     shootingStar.style.left = Math.floor(Math.random() * 1400) + "px";
     shootingStar.style.animationDelay = Math.floor(Math.random() * 2500) * 3 + 500 + "ms";
     shootingStar.style.animationDuration = Math.floor(Math.random() * 1500) + 3500 + "ms";
-    inclSky.style.setProperty("--longStar", Math.floor(Math.random() * 200) + 80 + "px");
+    inclSky.style.setProperty("--longStar", Math.floor(Math.random() * 330) + 80 + "px");
     inclSky.style.setProperty("--skyX", Math.floor(Math.random() * 500) + 700 + "px");
     inclSky.appendChild(shootingStar);
   }

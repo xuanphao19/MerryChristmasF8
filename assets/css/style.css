@@ -14,23 +14,23 @@ body {
   height: 100vh;
   overflow: hidden;
   /* background-color: rgb(44, 56, 91); */
-  background-image: url(./galaxy.jfif);
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-image: url(./galaxy.jfif); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
 }
 .Christmas {
   width: 100%;
   height: 100%;
   z-index: 1;
   /* opacity: 0.6; */
-  filter: brightness(0.9);
+  /* filter: brightness(0.9); */
 }
 .SantaClaus {
   left: -20%;
   bottom: 20px;
   width: 600px;
   z-index: 2;
-  filter: drop-shadow(0px 0px 26px #4437ff);
+  filter: drop-shadow(0px 0px 10px #4437ff);
   animation: SantaClausMove 8s infinite linear;
   -webkit-box-reflect: below -35% linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
 }
@@ -41,8 +41,8 @@ body {
     opacity: 0;
     width: 750px;
   }
-  10% {
-    opacity: 0.6;
+  5% {
+    opacity: 0.8;
   }
   20% {
     opacity: 0.2;
@@ -176,7 +176,7 @@ body {
   left: 42px;
   width: 101px;
   border-radius: 9999px;
-  box-shadow: inset rgb(0 0 0 / 65%) 0px 0px 10px;
+  /* box-shadow: inset rgb(0 0 0 / 65%) 0px 0px 10px; */
   /* filter: brightness(0.7); */
   z-index: 1;
 }
@@ -210,7 +210,7 @@ body {
   box-shadow: inset 0 0 17px rgba(0, 0, 0, 0.93);
   animation: theEarthRotates 36s linear infinite;
   transition: all linear 0.3s;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 @keyframes theEarthRotates {
   0% {
@@ -455,7 +455,6 @@ body {
     opacity: 0;
   }
 }
-
 .inclinedSky {
   --longStar: 120px;
   --skyX: 1000px;
@@ -500,16 +499,20 @@ body {
     width: var(--longStar);
     opacity: 1;
   }
-  20% {
-    height: 1px;
+  /* 10% {
     -webkit-filter: drop-shadow(0 0 1px #ff3300);
-    background: radial-gradient(90% 50% at right 50%, #acfeff 25%, rgba(0, 0, 255, 0));
+    width: calc(100+ var(--longStar));
+  } */
+  20% {
+    width: calc(100+ var(--longStar));
+    height: 1px;
+    background: radial-gradient(90% 50% at right 50%, #ffffff 25%, rgba(0, 0, 255, 0));
   }
   30% {
     opacity: 1;
     height: 1px;
-    -webkit-filter: drop-shadow(0 0 1px #ff3300);
-    background: radial-gradient(90% 50% at right 50%, #00fbff 25%, rgba(0, 0, 255, 0));
+    /* -webkit-filter: drop-shadow(0 0 1px #ff3300); */
+    background: radial-gradient(90% 50% at right 50%, #bafff4 25%, rgba(0, 0, 255, 0));
   }
   80% {
     width: 0;
@@ -521,11 +524,3 @@ body {
     background-image: linear-gradient (to right, red, blue);
   }
 }
-/* canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-img#bubbles {
-  display: none;
-} */
