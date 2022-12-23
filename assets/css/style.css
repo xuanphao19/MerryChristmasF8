@@ -274,7 +274,7 @@ body {
     opacity: 0;
   }
   5% {
-    opacity: 0.7;
+    opacity: 0.8;
   }
   50% {
     opacity: 1;
@@ -523,4 +523,12 @@ body {
     transform: translateX(var(--skyX));
     background-image: linear-gradient (to right, red, blue);
   }
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+img#bubbles {
+  display: none;
 }
