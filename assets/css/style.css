@@ -156,7 +156,7 @@ body {
   background-size: 100%;
   animation: giftBox5Move 8s infinite linear;
   transition: all linear 0.3s;
-  filter: brightness(0.8);
+  /* filter: brightness(0.8); */
   opacity: 0.9;
 }
 @keyframes giftBox5Move {
