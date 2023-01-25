@@ -532,3 +532,544 @@ canvas {
 img#bubbles {
   display: none;
 }
+@import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  user-select: none !important;
+}
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  /* background-color: rgb(44, 56, 91); */
+  background-image: url(./galaxy.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Christmas {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* opacity: 0.6; */
+  filter: brightness(0.9);
+}
+.SantaClaus {
+  left: -20%;
+  bottom: 20px;
+  width: 600px;
+  z-index: 2;
+  filter: drop-shadow(0px 0px 26px #4437ff);
+  animation: SantaClausMove 8s infinite linear;
+  -webkit-box-reflect: below -35% linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+@keyframes SantaClausMove {
+  0% {
+    top: 40%;
+    left: -20%;
+    opacity: 0;
+    width: 750px;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 0%;
+    left: 105%;
+    opacity: 0.01;
+    width: 50px;
+  }
+}
+
+.giftBox,
+.SantaClaus,
+.MerryChristmas {
+  position: absolute;
+}
+.giftBox {
+  width: 121px;
+  opacity: 0.7;
+  z-index: 3;
+  filter: drop-shadow(0px 0px 16px #ffc6b5);
+}
+.giftBox1 {
+  width: 20px;
+  opacity: 0.5;
+  animation: giftBox1Move 260s infinite linear;
+}
+@keyframes giftBox1Move {
+  0%,
+  100% {
+    top: 28px;
+    right: 70%;
+  }
+  50% {
+    top: 65px;
+    right: 40%;
+  }
+}
+.giftBox2 {
+  width: 30px;
+  opacity: 0.5;
+  animation: giftBox2Move 260s infinite linear;
+}
+@keyframes giftBox2Move {
+  0%,
+  100% {
+    top: 38px;
+    right: 30%;
+  }
+  50% {
+    top: 75px;
+    right: 60%;
+  }
+}
+.giftBox3 {
+  width: 22px;
+  top: 40%;
+  left: 19%;
+  opacity: 0.7;
+  animation: giftBox3Move 24s infinite linear;
+  z-index: 0;
+}
+@keyframes giftBox3Move {
+  0% {
+    top: 40%;
+    left: 15%;
+  }
+  100% {
+    top: 40%;
+    left: 25%;
+    opacity: 0;
+  }
+}
+.giftBox4 {
+  top: 48px;
+  width: 101px;
+  left: 7%;
+  opacity: 0.6;
+  filter: brightness(0.8);
+}
+.giftBox5 {
+  position: absolute;
+  right: 8%;
+  top: 68px;
+  width: 180px;
+  height: 365px;
+  background-image: url(./KhinhKhiCauF8.png);
+  background-size: 100%;
+  animation: giftBox5Move 8s infinite linear;
+  transition: all linear 0.3s;
+  filter: brightness(0.9);
+  opacity: 0.9;
+}
+@keyframes giftBox5Move {
+  50% {
+    top: 105px;
+    right: 180px;
+  }
+  0%,
+  100% {
+    top: 68px;
+    right: 130px;
+  }
+}
+.giftBoxF8 {
+  position: absolute;
+  top: 28px;
+  left: 42px;
+  width: 101px;
+  border-radius: 9999px;
+  /* box-shadow: inset rgb(0 0 0 / 65%) 0px 0px 10px; */
+  /* filter: brightness(0.7); */
+  z-index: 1;
+}
+.earthWrap {
+  position: absolute;
+  top: 24px;
+  left: 37px;
+  width: 110px;
+  height: 116px;
+  display: flex;
+  align-items: center;
+  border-radius: 99999px;
+  justify-content: center;
+  transform-style: preserve-3d;
+  perspective: 90px;
+  transform: rotateZ(340.5deg);
+  box-shadow: 0 0 0 12px rgba(122, 204, 175, 0.579);
+  z-index: 2;
+}
+.earth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: 99999px;
+  background: url(./worldMap102.png);
+  background-size: cover;
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 17px rgba(0, 0, 0, 0.93);
+  animation: theEarthRotates 36s linear infinite;
+  transition: all linear 0.3s;
+  opacity: 0.8;
+}
+@keyframes theEarthRotates {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -939px 0;
+  }
+}
+.MerryChristmas {
+  top: 13%;
+  left: 50%;
+  color: rgba(255, 34, 34, 0.867);
+  font-size: 62px;
+  transform: translateX(-50%);
+  font-family: "Rubik 80s Fade", cursive;
+  animation: hueChristmas 12s infinite linear;
+  text-shadow: -2px 4px 0px #ff8d8d93;
+  z-index: 99;
+}
+.MerryChristmas::after {
+  content: "Merry Christmas F8!";
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  color: unset;
+  opacity: 0.3;
+  transform: rotate3d(1, 0, 0, 180deg);
+  z-index: -1;
+}
+@keyframes hueChristmas {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.wrapSnow {
+  --move: "";
+  --dropShadowSnow: #e2e2fff9;
+  top: 7%;
+  left: 8%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  object-fit: cover;
+  border-radius: 999px;
+  background: transparent;
+  animation: snowMove 20s ease-in-out infinite;
+  transition: all linear 0.3s;
+  /* opacity: 0.9; */
+}
+@keyframes snowMove {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--move), 50vh);
+    opacity: 0;
+  }
+}
+.snow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 999px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-position: center center;
+  background-image: url(Snow01.png);
+  filter: drop-shadow(0 0 4px var(--dropShadowSnow));
+  -webkit-filter: drop-shadow(0 0 4px var(--dropShadowSnow));
+  animation: snowRevolve 120s ease-out infinite;
+  transition: all linear 0.3s;
+  box-shadow: 0 -2px 4px #73c0a06e;
+}
+@keyframes snowRevolve {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(3600deg);
+  }
+}
+.shootingStar {
+  position: absolute;
+  border-radius: 999px;
+  filter: drop-shadow(0 0 1px #e7ffc7d7);
+  -webkit-filter: drop-shadow(0 0 1px #f0ffddd9);
+}
+
+.star,
+.wrapStar {
+  position: absolute;
+  border-radius: 999px;
+  filter: drop-shadow(0 0 4px #e7ffc7d7);
+  -webkit-filter: drop-shadow(0 0 4px #f0ffddd9);
+}
+.wrapStar {
+  animation: snowRevolve 56s ease-out infinite;
+}
+.shootingStar,
+.wrapStar {
+  left: 50%;
+  top: 50%;
+  --starDelay: "";
+  --wStarA: "";
+  --sizeStar: "";
+  opacity: 0.9;
+}
+.star {
+  left: 50%;
+  top: 50%;
+}
+.star::after,
+.wrapStar::after,
+.star::before,
+.wrapStar::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  height: 1px;
+  width: 1px;
+  opacity: 0.3;
+  border-radius: 100%;
+  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #ffffff, rgba(0, 0, 255, 0));
+  /* background: radial-gradient(75% 50% at 50% 50%, #ffffff, rgba(0, 0, 255, 0)); */
+  -webkit-transform: translateX(50%) rotateZ(45deg);
+  transform: translateX(50%) rotateZ(45deg);
+}
+.star::before {
+  -webkit-transform: translateX(50%) rotateZ(-45deg);
+  transform: translateX(50%) rotateZ(-45deg);
+}
+.wrapStar::before {
+  -webkit-transform: translateX(50%) rotateZ(-45deg);
+  transform: translateX(50%) rotateZ(90deg);
+}
+.star::after,
+.star::before,
+.wrapStar::before {
+  animation: StarBeShining 2200ms ease-in-out infinite;
+  animation-delay: var(--starDelay);
+  transition: all linear 0.3s;
+}
+@keyframes StarBeShining {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  10% {
+    width: var(--sizeStar);
+    height: 1px;
+    opacity: 1;
+  }
+  20% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  50% {
+    width: var(--sizeStar);
+    height: 1px;
+    opacity: 1;
+  }
+  60% {
+    width: 0;
+    height: 0px;
+    opacity: 0;
+  }
+  90% {
+    width: calc(3px + (var(--sizeStar)));
+    height: 1px;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+.wrapStar::after {
+  width: var(--StarWa);
+  -webkit-transform: translateX(50%) rotateZ(-45deg);
+  transform: translateX(50%) rotateZ(0deg);
+  animation: wrapStarShining 2200ms ease-in-out infinite;
+  animation-delay: var(--starDelay);
+  transition: all linear 0.3s;
+}
+@keyframes wrapStarShining {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  10% {
+    width: var(--StarWa);
+    height: 1px;
+    opacity: 1;
+  }
+  20% {
+    width: 0;
+    height: 0px;
+    opacity: 0;
+  }
+  40% {
+    width: var(--StarWa);
+    height: 1px;
+    opacity: 1;
+  }
+  50% {
+    width: 0;
+    height: 0px;
+    opacity: 0;
+  }
+  90% {
+    width: calc(3px + (var(--StarWa)));
+    height: 1px;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+.inclinedSky {
+  --longStar: 120px;
+  --skyX: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotateZ(5deg);
+  transform: rotateZ(5deg);
+  animation: inclSky 60000ms linear infinite;
+  transition: all linear 0.3s;
+  animation-delay: 20s;
+  z-index: 1;
+}
+@keyframes inclSky {
+  0%,
+  100% {
+    transform: rotate(345deg);
+  }
+  50% {
+    transform: rotate(375deg);
+  }
+}
+.shootingStar {
+  top: 20%;
+  left: 20%;
+  width: 10px;
+  height: 1px;
+  border-radius: 9999px;
+  animation: shootingStarMove 4000ms ease-out infinite;
+  transition: all linear 0.3s;
+  z-index: 99;
+}
+@keyframes shootingStarMove {
+  0% {
+    width: 20px;
+    opacity: 0.5;
+    background: radial-gradient(90% 50% at right 50%, #ffffff 25%, rgba(0, 0, 255, 0));
+  }
+  2% {
+    width: var(--longStar);
+    opacity: 1;
+  }
+  20% {
+    height: 1px;
+    -webkit-filter: drop-shadow(0 0 1px #ff3300);
+    background: radial-gradient(90% 50% at right 50%, #acfeff 25%, rgba(0, 0, 255, 0));
+  }
+  30% {
+    opacity: 1;
+    height: 1px;
+    -webkit-filter: drop-shadow(0 0 1px #ff3300);
+    background: radial-gradient(90% 50% at right 50%, #00fbff 25%, rgba(0, 0, 255, 0));
+  }
+  80% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(var(--skyX));
+    background-image: linear-gradient (to right, red, blue);
+  }
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+img#bubbles {
+  /* display: none; */
+
+  background-image: radial-gradient(80% 80% at 50% 50%, #000, rgba(0, 0, 255, 0.081));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in;
+}
+
+.nav li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}

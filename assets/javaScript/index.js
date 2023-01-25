@@ -44,3 +44,117 @@ document.addEventListener("DOMContentLoaded", function (event) {
     inclSky.appendChild(shootingStar);
   }
 });
+
+/* 11111111111111111111111111111111111111111111 */
+document.addEventListener("DOMContentLoaded", function (event) {
+  let c = document.querySelector("canvas");
+  c.width = window.innerWidth;
+  c.height = window.innerHeight;
+  let mouseIn = false;
+  let pen = c.getContext("2d");
+  let mouseCoord = {
+    x: window.innerWidth,
+    y: window.innerHeight,
+  };
+  let circleArr = [];
+  window.addEventListener("mousedown", (e) => {
+    mouseCoord.x = e.x;
+    mouseCoord.y = e.y;
+    mouseIn = true;
+  });
+  window.addEventListener("mouseup", (e) => {
+    mouseIn = false;
+  });
+  function Circle(x, y, r, alp, dx, dy) {
+    this.x = x;
+    this.y = y;
+    this.r = r;
+    this.d = r;
+    this.h = r;
+    this.alp = alp;
+    this.ttl = 100;
+    // this.color = colors[Math.floor(Math.random() * colors.length)];
+    this.draw = function () {
+      // pen.beginPath();
+      // pen.fillStyle = this.color;
+      // pen.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+
+      // pen.fillStyle = "rgba(0,0,0,0.8)";
+      // pen.fillRect(0, 0, c.width, c.height);
+
+      // pen.shadowBlur = 5; Nặng máy!
+      // pen.shadowColor = "red";
+
+      var img = document.getElementById("bubbles");
+      pen.drawImage(img, this.x, this.y, this.d, this.h);
+
+      pen.fill();
+      pen.closePath();
+      pen.globalAlpha = this.alp;
+    };
+
+    this.update = function () {
+      this.x = this.x + dx;
+      this.y = this.y + dy;
+      this.ttl -= 1;
+      let setCoordX = mouseCoord.x - this.x;
+      let setCoordY = mouseCoord.y - this.y;
+      // Quyết định phạm vi di chuyển và độ lớn dần của vật
+      if (setCoordX < 800 && setCoordX > -800 && setCoordY < 510 && setCoordY > -510) {
+        this.d += 3;
+        this.h += 3;
+        if (this.r < 5) {
+          this.r += 1;
+        }
+      } else {
+        if (this.r > 0) {
+          this.r -= 1;
+          this.d -= 2;
+          this.h -= 2;
+        }
+        if (this.alp > 0) {
+          this.alp = alp - 0.3;
+        }
+      }
+
+      this.draw();
+    };
+  }
+
+  function drawFireworks() {
+    requestAnimationFrame(drawFireworks);
+    pen.clearRect(0, 0, c.width, c.height);
+    if (mouseIn) {
+      let x = mouseCoord.x;
+      let y = mouseCoord.y;
+      let alp = 1;
+
+      for (let i = 0; i < 5; i++) {
+        let r = Math.random() * 3;
+        //dx dy quyết định tốc độ, hướng di chuyển
+        let dx = (Math.random() - 0.5) * 55;
+        let dy = (Math.random() - 0.8) * 35;
+        circleArr.push(new Circle(x, y, r, alp, dx, dy));
+      }
+
+      for (let i = 0; i < circleArr.length; i++) {
+        if (circleArr[i].r <= 0) {
+          circleArr.splice(0, 1);
+        }
+        if (circleArr[i].d <= 0) {
+          circleArr.splice(0, 1);
+        }
+        if (circleArr[i].h <= 0) {
+          circleArr.splice(0, 1);
+        }
+
+        console.log(circleArr[i].ttl);
+        if (circleArr[i].ttl === 70) {
+          circleArr.splice(0, 1);
+        }
+        circleArr[i].update();
+      }
+    }
+  }
+  drawFireworks();
+});
